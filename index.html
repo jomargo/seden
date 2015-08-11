@@ -66,7 +66,7 @@ background-position: center !important;">
         </div>
         <p class="ck_errorArea"></p>
 
-        <!--  Form starts here  -->
+        <!--  Form starts here
         <form id="ck_subscribe_form" class="signup-form" action="https://app.convertkit.com/landing_pages/913/subscribe" data-remote="true">
           <input type="hidden" name="id" value="913" id="landing_page_id"></input>
             <div class="col-xs-12 col-sm-4">
@@ -81,6 +81,9 @@ background-position: center !important;">
               <input class="btn-primary btn-hg" type="submit" id='ck_subscribe_button' value="{{site.data.homepage.signup.button}}">
             </div>
         </form>
+        -->
+
+
       </div>
     </div>
   </div>
@@ -270,15 +273,14 @@ background-position: center !important;">
         <form id="ck_subscribe_form" class="signup-form" action="https://app.convertkit.com/landing_pages/913/subscribe" data-remote="true">
           <input type="hidden" name="id" value="913" id="landing_page_id"></input>
           <div class="row">
-            <input class="col-xs-12 col-sm-4 col-sm-offset-4" name="first_name" id="ck_firstNameField" required type="textbox" placeholder="First name">
-          </div>
-
-          <div class="row">
-            <input class="col-xs-12 col-sm-4 col-sm-offset-4" name="email" id="ck_emailField" required type="textbox" placeholder="Enter your e-mail address">
-          </div>
-
-          <div class="row">
-            <input class="col-xs-12 col-sm-4 col-sm-offset-4 btn-primary btn-hg" type="submit" id='ck_subscribe_button' value="{{site.data.homepage.signup.button}}">
+            <div class="col-lg-12 col-md-12">
+              <input class="col-xs-12 col-sm-4 col-sm-offset-4" name="first_name" id="ck_firstNameField" required type="textbox" placeholder="First name">
+            <div class="col-lg-12 col-md-12">
+              <input class="col-xs-12 col-sm-4 col-sm-offset-4" name="email" id="ck_emailField" required type="textbox" placeholder="Enter your e-mail address">
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <input class="col-xs-12 col-sm-4 col-sm-offset-4 btn-primary btn-hg" type="submit" id='ck_subscribe_button' value="{{site.data.homepage.signup.button}}">
+            </div>
           </div>
         </form>
 
