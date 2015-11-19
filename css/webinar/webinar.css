@@ -1,0 +1,1441 @@
+
+/** CSS for the Webinar Funnel */
+
+/*** TABLE OF CONTENTS **/
+
+/**
+
+    $A - CSS RESET
+
+    $B - General Styles
+        $B2 - CTA
+        $B3  - Hubspot Forms
+
+    $C - Sign Up Page (index.html && layout/webinar-index.html)
+        $C1 - Sign Up Page Header
+        $C2 - Calendar (not the countdown timer)
+        $C3 - Hosts (invited by/hosted by)
+        $C4 - Webinar Benefits
+        $C5 - Warning Message (limited time offer, etc.)
+        $C6 - Modal Window
+        $C7 - Responsive Styling
+
+    $D - Countdown Timer (index && replay)
+
+    $E - WEBINAR REPLAY
+
+    $F - WEBINAR PAGE
+
+    $G - SIDEBAR CHAT
+
+**/
+
+
+
+
+
+
+
+
+/** $A - CSS Reset **/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $B - GENERAL STYLES*/
+
+
+.large-container{
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:0px;
+}
+
+.medium-container{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.small-container{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+strong{
+    font-weight: bold;
+}
+
+
+/* $B2 - CTA */
+.cta{
+    color: #FFF;
+    padding: 20px 55px;
+    font-size: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    background: #00C2A9 none repeat scroll 0% 0%;
+    cursor: pointer;
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 375px;
+    transition: all 0.3s ease 0s;
+    box-sizing:border-box;
+}
+
+.cta:hover{
+    transform: scale(1.07);
+    transition: all 0.3s ease 0s;
+}
+
+.cta:active{
+    transform: scale(1);
+    -webkit-box-shadow: inset -2px -2px 5px 3px rgba(0,0,0,0.13);
+    -moz-box-shadow: inset -2px -2px 5px 3px rgba(0,0,0,0.13);
+    box-shadow: inset -2px -2px 5px 3px rgba(0,0,0,0.13);
+    
+    transition: all 0.1s ease 0s;
+}
+
+
+.webinar-signup .bottom-cta{
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width:800px;
+    margin-top:25px;
+    box-sizing:border-box;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $B3 - Hubspot Forms */
+
+input {
+    
+    -webkit-appearance: none; /* no iPhone default styles */
+    border-radius: 0;
+}
+
+.hs_email span{
+    display:none;
+}
+
+input[name="email"]{
+    outline: medium none !important;
+    border-color: #C9D7DD !important;
+    background-color: #FFF !important;
+    padding: 13px !important;
+    color: #201D1D !important;
+    background: #FFF none repeat scroll 0% 0% !important;
+    border: 1pt solid #C9D7DD !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    transition: none 0s ease 0s !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0px !important;
+    box-sizing: border-box !important;
+    font-size: 1.2em !important;
+    line-height: 1.2em !important;
+    text-align: left !important;
+    height:50px !important;
+}
+
+
+.hs-button{
+    
+    font-family: "Open Sans",Helvetica,Arial,sans-serif !important;
+    font-size: 14pt !important;
+    letter-spacing: 0em !important;
+    background-color: #1285DD !important;
+    border-style: solid !important;
+    border-width: 0pt !important;
+    border-color: #C0C0C0 !important;
+    text-shadow: 2px 2px 0px #1285DD !important;
+    margin: 0.2em auto 0px !important;
+    padding: 0.9em !important;
+    color: #FFF !important;
+    text-align: left !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    border-radius: 3px !important;
+    line-height: 100% !important;
+    max-width: none !important;  
+    display: block !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    background-image:none !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    margin-top:-25px !important;
+    display:block !important;
+    
+}
+
+.hs_email{
+    margin-bottom: 0px !important;
+}
+.actions{
+    padding-left: 20px;
+    padding-right:0px !important;
+}
+
+
+@media all and (max-width: 600px){
+    input[name="email"]{
+        width: 80% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        font-size:16px !important;
+    }
+    
+    .hs-button{
+        width: 80% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        font-size:16px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/** $C - Sign Up Page **/
+    
+
+    /* The sign up page was based off a lead pages design that existed previously */
+
+
+
+.webinar-signup{
+    background-color: rgb(255, 255, 254);   
+    font-family: "Open Sans",sans-serif;
+    word-wrap: break-word;
+    font-size: 16px;
+    
+}
+
+.webinar-signup footer{
+    background: #F1F1F0 none repeat scroll 0% 0%;
+    margin-top:75px;
+    height:35px;
+    box-sizing:border-box;
+}
+
+.webinar-signup .main-content{
+    margin: 30px auto 15px;
+    max-width: 800px;
+    
+}
+
+.webinar-signup .column-right{
+    width: 47.5%;
+    max-width: 380px;
+    display: table-cell;
+    vertical-align: top;
+    padding-bottom: 25px;
+    background: #F1F1F1 none repeat scroll 0% 0%;
+    padding: 20px;
+    
+}
+
+.webinar-signup .column-left{
+    width: 52.5%;
+    max-width: 420px;
+    display: table-cell;
+    vertical-align: top;
+    background: #333330 none repeat scroll 0% 0%;
+    padding: 20px;
+
+}
+
+    
+
+/* $C1 - Sign Up Page Header */
+
+.webinar-signup header{
+    margin:0px auto;
+    max-width: 800px;
+    text-align:center;
+    font-size: 1.5rem;
+    
+}
+
+.webinar-signup .header-intro{
+    color: #333;
+    font-weight: 400;
+    padding: 10px 0px 0px;
+}
+
+.webinar-signup .header-intro::after {
+    content: "";
+    display: block;
+    margin: 23px auto 0px;
+    height: 1px;
+    width: 77%;
+    background: #333 none repeat scroll 0% 0%;
+    
+}
+
+.webinar-signup .header-title{
+    margin: 30px 0px;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.webinar-signup .header-title em{
+    color: #00C2A9;    
+    
+}
+
+
+
+
+
+/* $C2 - Calendar */
+
+.webinar-signup .calendar-container{
+    overflow: hidden;
+    margin: 0px auto 30px;
+    max-width: 378px;
+    
+
+}    
+
+.webinar-signup .calendar-box{
+    width: 114px;
+    float: left;
+    margin-right: 15px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.webinar-signup .calendar-month{
+    font-size: 1.125rem;
+    display: block;
+    margin: 0px;
+    padding: 8px 0px;
+    line-height: 1;
+    color: #F3F3F3;
+    background: #00C2A9 none repeat scroll 0% 0%;
+}
+
+.webinar-signup .calendar-date{
+    font-size: 4.125rem;
+    display: block;
+    margin: 0px;
+    padding: 5px 0px 9px;
+    line-height: 1;
+    color: #9D9C9C;
+    background: #FFF none repeat scroll 0% 0%;
+}
+
+.webinar-signup .calendar-schedule{
+    color: #FFFFFD;
+    overflow: hidden;  
+}
+
+.webinar-signup .calendar-day-text{
+
+    font-size: 1.5rem;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.webinar-signup .calendar-date-text{
+    font-size: 1.9375rem;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 700;
+    /*text-transform: uppercase;*/
+}
+
+.webinar-signup .calendar-time-text{
+    font-size: 1.125rem;   
+    clear: both;
+    display: block;
+    margin: 8px 0px 0px;
+    border-top: 1px dashed #ABABAB;
+    padding: 4px 0px 0px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+/* $C3 - Hosts */
+.webinar-signup .hosts-container{
+    display: table;
+    table-layout: fixed;
+    margin: 0px auto;
+    padding: 0px;
+    width: 100%;
+    max-width: 378px;
+    list-style: outside none none;
+}
+
+.webinar-signup .host{
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+    text-align: center;
+    color: #FFFFFD;
+}
+
+.webinar-signup .host:first-child{
+    padding-right: 8px;
+}
+
+.webinar-signup .host-photo{
+    display: block;
+    margin: 0px auto 20px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    width: 100%;
+    max-width: 170px;
+}
+
+.webinar-signup .host-byline{
+    display: block;
+    margin: 0px 0px 7px;
+    padding: 0px;
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 400;
+
+}
+
+.webinar-signup .host-name{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.375rem;
+    font-weight: 700;
+    text-transform: uppercase !important;
+}
+
+
+
+
+
+
+
+
+
+/* $C4 - Webinar Benefits */
+
+.benefits-container{
+    margin-bottom:100px;
+    display:block;
+}
+
+.benefits-title{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    padding-top:120px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    
+}
+
+
+.benefits-copy{
+    margin: 0px;
+    padding: 0px;
+    list-style: outside none none;
+}
+
+.benefits-copy li{
+    font-size: 1.125rem;
+    display: block;
+    margin: 20px 0px 0px;
+    padding: 0px 0px 0px 40px;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.3;
+    color: #333;
+}
+
+.benefits-copy li::before {
+    content: "\2713";
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    font-family: arial;
+    font-size: 1.75rem;
+    color: #00C2A9;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $C5 - Warning Message */ 
+.warning-container{
+        display:block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        max-width: 800px;
+        position:relative;
+        
+}
+
+.warning-msg{
+    margin: 0px;
+    /*padding-left: 20px 20px 20px 75px;*/
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size: 0.875rem;
+    line-height: 1.42;
+    color: #333;
+    background: #FCF0F0 none repeat scroll 0% 0%;
+    box-sizing:border-box;
+}
+
+.warning-cta{
+    margin: 0px;
+    padding: 15px 20px;
+    font-size: 1.125rem;
+    font-style: italic;
+    text-align: center;
+    color: #FFFFFD;
+    background: #333332 none repeat scroll 0% 0%;
+    width: 100%;
+    box-sizing:border-box;
+}
+
+.warning-cta::after {
+    display: block;
+    content: "";
+    margin: 0px auto;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 16px 17px 0px;
+    border-color: #333332 transparent transparent;
+    position: absolute;
+    bottom: -16px;
+    left: 0px;
+    right: 0px;
+}
+
+
+.webinar-signup .bottom-cta{
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width:800px;
+    margin-top:25px;
+    box-sizing:border-box;   
+}
+
+
+
+
+/* $C6 - Modal Window */
+.modal-covering{
+    transition: all 1s ease;
+}
+
+.modal-covering-select{
+    position:fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-color: #000;
+    
+    transition: all 0.5s ease;
+}
+
+.modal-window{
+    position:fixed;
+    bottom:-100%;
+    left: 25%;
+    
+    background-color: #fff;
+    border: 1px solid #ececec;
+    width: 50%;
+    max-width:800px;
+    border-radius:2px;
+    padding-bottom:25px;
+    
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+    
+    transition: all 1s ease;
+}
+
+.modal-select{
+    position:fixed;
+    bottom:25%;
+    
+    transition: all 0.5s ease;
+}
+
+.modal-window-close{
+    float:right;
+    font-size:18px;
+    font-weight: bold;
+    margin-right: -12.5px;
+    margin-top:-12.5px;
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    background-color: #404040;
+    color:white;
+    text-align:center;
+    line-height: 25px;
+    padding:0px;
+    cursor:pointer;
+    transition: all 0.5s ease;
+    position:relative;
+    z-index:3;
+}
+
+.modal-window-close{
+    transition: all 0.5s ease;
+    background-color: #606060;
+}
+
+.modal-progress-bar{
+    max-width: 100%;
+    margin-top:-9px;
+    position:relative;
+    z-index:2;
+}
+
+.modal-header-text{
+    padding-top: 10px;
+    text-align: center;
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 5px;
+    margin-left: 62px;
+    margin-right: 57px;
+}
+
+.modal-window-form-wrapper{
+    width: 450px;
+    max-width: 100%;
+    padding: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.modal-window-title{
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    width: 100%;
+    max-width: 350pt;
+    color: #201D1D;
+    word-wrap: break-word !important;
+    word-break: normal !important;
+    text-align:center;
+    overflow:hidden;
+    line-height: 1.2;
+    font-size: 18pt;
+}
+
+.modal-window-subtext{
+    color:gray;
+    font-size:14px;
+    text-align:center;
+    margin-top:-28px;
+}
+
+
+
+
+
+/* $C7 - Responsive Styling*/
+@media all and (max-width: 1200px){
+    .modal-window{
+        width: 70%;
+        left:15%;
+    }
+}
+
+@media all and (max-width: 700px){
+    .webinar-signup header{
+        display:block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+        max-width: 800px;
+    }
+    
+    .column-left, .column-right{
+        display:block !important;
+        margin-right: auto;
+        margin-left: auto;
+        margin:0px !important;
+        width: 100% !important;
+        max-width: 800px !important;
+        box-sizing:border-box;
+    }
+    
+    .modal-window{
+        width: 80%;
+        left:10%;
+    }
+}
+
+@media all and (max-width: 700px){
+    .modal-window{
+        width: 90%;
+        left:5%;
+    }
+    .modal-window-title{
+        font-size:18px;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .modal-header-text{
+        width:90%;
+        margin-right: auto;
+        margin-left:auto;
+    }
+    
+    .warning-container, .bottom-cta{
+        display:block;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        width: 100%;
+        max-width: 800px;
+        box-sizing:border-box;
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $D - Countdown Timer*/
+.countdown-container{
+    margin: 0px 0px 35px;
+    
+}
+
+.countdown-title{
+    margin: 0px 0px 15px;
+    padding: 0px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+.countdown-inner{
+    display: block;
+    margin: 0px auto;
+    padding: 0px;
+    width: 254px;
+    list-style: outside none none;
+}
+
+.countdown-inner li{
+    float: left;
+    text-align: center;
+    margin: 0px 3px;
+    height: 100%;
+}
+
+.flap{
+    border-radius: 3px;
+    background-color: #000001;
+    width: 56px;
+    height: 56px;
+    padding: 10px 0px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.flap span{
+    width: 100%;
+    display: inline-block;
+    color: #FAFAFA;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.countdown-inner p{
+    display: inline-block;
+    float: left;
+    font-weight: 700;
+    color: #555;
+    font-size: 11px;
+    text-align: center;
+    width: 56px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin: 1px 0px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* $E - WEBINAR REPLAY */
+
+.replay {
+    font-family: "Raleway", "Open Sans","Lucida Sans Unicode","Lucida Grande",Helvetica,sans-serif;
+}
+
+.replay-section{
+    
+    display:block;
+    height: 100% !important;
+    background-image: -webkit-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,0.2)), -webkit-linear-gradient(108deg,#efb676,#e0a681 10%,#229991 90%);
+    background-image: -moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -moz-linear-gradient(108deg, #efb676, #e0a681 10%, #09A59A 90%);
+    background-image: -ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -ms-linear-gradient(108deg, #efb676, #e0a681 10%, #09A59A 90%);
+    background-color: #229991;
+    margin-top:0px !important;
+    padding-bottom:50px;
+
+}
+
+.replay-section h1{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:0px;
+    font-weight:normal;
+    padding-top:35px;
+    line-height: 1.25em;
+    color: #fff;
+    margin-top:0px;
+}
+
+.replay-subtitle{
+    max-width: 700px;
+}
+
+.replay-section .webinar-cta{
+    max-width: 700px;
+}
+
+.wistia-replay-box{
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:35px;
+    margin-bottom:35px;
+    width:80%;
+    max-width:800px;
+    border:2px solid #fafafa;
+}
+
+.replay-subtext{
+    text-align:center;
+    line-height:1.6em;
+    margin-top:5px;
+    color: #fff;
+    margin-top:15px;
+    font-size:20px;
+}
+
+.replay-cta-subtext{
+    color:white;
+    font-size:16px;
+    text-align:center;
+    max-width:500px;
+    line-height: 1.5em;
+    margin-top:10px;
+    margin-right:auto;
+    margin-left:auto;
+    color:#fafafa;
+}
+
+.replay-bonus-box{
+    width:80%;
+    max-width:800px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height:500px;
+    background-color:white;
+    padding:15px;
+    padding-left: 7%;
+    padding-right: 7%;
+    box-sizing:border-box;
+    margin-top:20px;
+    padding-bottom:50px;
+}
+
+.replay-hello-box{
+    padding-top:10px;
+    padding-bottom:10px;
+    line-height:1.5em;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:#fafafa;
+    color:#020202;
+    border-radius:5px;
+    text-align:center;
+
+}
+
+.replay-hello-box span{
+    background-image: url(https://lh3.googleusercontent.com/_Fhlz5XlK5QM-1szgk_cn5TDfmnhUuQuf5g8Y63vBWBKi8GOY8uC-aHgcLpgFfcD2pk-TcQSFwcc_gwFpnoi3YI=s0);
+    background-position: 0px center;
+    background-repeat: no-repeat;
+    background-size:20px 20px;
+    height:100%;
+    padding-left:25px;
+}
+
+.replay-countdown{
+    display:block;
+    margin-right: auto;
+    margin-left:auto;
+    height:100px;
+}
+
+.replay-timeout-text{
+    font-size:16px;
+    text-align:center;
+    max-width:500px;
+    line-height: 1.5em;
+    margin-top:10px;
+    margin-right:auto;
+    margin-left:auto;
+    color:gray;
+    margin-bottom:15px;
+}
+
+.replay-bonus-header{
+    display:block;
+    line-height: 1.5em;
+    font-weight: normal;
+    text-align:center;
+    font-size:25px;
+    margin-top:15px;
+}
+
+.replay-bonus-subheader{
+    margin-bottom:20px;
+    margin-top:20px;
+    font-size:18px;
+}
+
+.replay-bonus-list{
+    line-height: 1.5em;
+}
+.replay-bonus-list li{
+    margin-bottom:5px;
+}
+
+
+
+
+
+
+
+
+/* $F - WEBINAR PAGE */
+
+.webinar-play{
+    font-family: "Raleway", "Open Sans","Lucida Sans Unicode","Lucida Grande",Helvetica,sans-serif;
+}
+
+.webinar-play header{
+    background-image:-webkit-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,0.2)),-webkit-linear-gradient(108deg,#efb676,#e0a681 10%,#229991 90%);
+    background-image:-moz-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,0.2)),-moz-linear-gradient(108deg,#efb676,#e0a681 10%,#229991 90%);
+    background-image:-ms-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,0.2)),-ms-linear-gradient(108deg,#efb676,#e0a681 10%,#229991 90%)
+}
+
+
+.logo{
+    padding-top:15px;
+    padding-bottom:15px;
+    width: 150px;
+    display:block;
+}
+
+.date-time-text{
+    text-align:center;
+    line-height:1.5em;
+    margin-top:5px;
+    color: #fff;
+}
+
+.post-message {
+    color: red;
+}
+
+
+.left-side{
+    display:inline-block;
+    vertical-align:top;
+    width: 27%;
+    background-color: #f7f7f4;
+    height:100%;
+    min-height: 800px;
+    box-sizing:border-box;
+}
+
+.right-side{
+    display:inline-block;
+    vertical-align:top;
+    width: 73%;
+    padding-bottom: 0px;
+    height:100%;
+    min-height: 800px;
+    box-sizing:border-box;
+    background-image: -webkit-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,0.2)), -webkit-linear-gradient(108deg,#efb676,#e0a681 10%,#229991 90%);
+    background-image: -moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -moz-linear-gradient(108deg, #efb676, #e0a681 10%, #09A59A 90%);
+    background-image: -ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -ms-linear-gradient(108deg, #efb676, #e0a681 10%, #09A59A 90%);
+    background-color: #229991;
+}
+
+.right-side h1{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:0px;
+    font-weight:normal;
+    padding-top:35px;
+    margin-top:0px;
+    line-height: 1.25em;
+    color: #fff;
+}
+
+.google_hangout{
+    width: 80%;
+    display:block;
+    margin-right:auto;
+    margin-left: auto;
+    height:400px;
+    margin-top:50px;
+}
+
+.webinar-cta{
+    width: 80%;
+    display:block;
+    margin-right:auto;
+    margin-left: auto;
+    height:70px;
+    line-height: 67px;
+    margin-top:30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0px !important;
+    font-size: 22px;
+    font-weight: 700 !important;
+    color: #E97E0B;
+    border: 2px solid #E97E0B;
+    background: #FFF9F2 none repeat scroll 0% 0%;
+    border-radius: 9px;
+    box-sizing:border-box;
+    transition: all 0.3s ease;
+}
+
+.webinar-cta:hover{
+    background: #FFF9F2 none repeat scroll 0% 0%;
+    color: #AD671C;
+    border: 2px solid #AD671C;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.submitted-message{
+    display:none;
+}
+
+.webinar-play .hbspt-form, .replay .hbspt-form{
+    display:none;
+}
+
+
+@media all and (max-width: 950px){
+    
+ .right-side{
+    width:100%;
+    display:block;
+    padding-bottom: 100px;
+    min-height:auto;
+}
+
+    .left-side{
+    width: 100%;
+    display: block;
+    height: 500px;
+ }
+ 
+}
+
+@media all and (max-width: 500px){
+    .google_hangout{
+        height: 300px;
+    }
+    
+    .webinar-cta{
+        font-size:12px;
+    }
+    
+    .logo{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+}
+
+.hidden{
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.webinar{
+    min-height: 100%;
+    margin-top:0px;
+    background-color:rgb(247, 247, 244);
+}
+
+.webinar-past{
+    display:none;
+}
+
+.webinar-replay-box{
+    display:none;
+
+    height: 100% !important;
+    margin-top:0px;
+    padding-top:0px !important;
+    padding-bottom:50px !important;
+    
+}
+.webinar-replay-box-active{
+    display:block;
+}
+.webinar-replay-box h1{
+    color:#404040;
+    text-align:center;
+    font-size:45px;
+    margin-top:0px;
+    padding-top:50px !important;
+}
+.webinar-replay-box p{
+    color:#404040;
+    text-align:center;
+}
+
+.webinar-replay-box a{
+    width: 400px;
+    display:block;
+    margin-right:auto;
+    margin-left: auto;
+    height:70px;
+    line-height: 67px;
+    margin-top:30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0px !important;
+    font-size: 22px;
+    font-weight: 700 !important;
+    color: #E97E0B;
+    border: 2px solid #E97E0B;
+    background: #FFF9F2 none repeat scroll 0% 0%;
+    border-radius: 9px;
+    box-sizing:border-box;
+    transition: all 0.3s ease;
+}
+
+.webinar-replay-box a:hover{
+    background: #FFF9F2 none repeat scroll 0% 0%;
+    color: #AD671C;
+    border: 2px solid #AD671C;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+/* $G - SIDEBAR CHAT */
+
+.submit-messages-box{
+    opacity:0;
+    pointer-events:none;
+    transition: all 0.5s ease;
+}
+
+.submit-messages-box-select{
+    transition: all 0.5s ease;
+    opacity:1 !important;
+    pointer-events:auto !important; 
+
+}
+
+.chat-title{
+    text-align:center;
+    font-size:25px;
+    font-weight:bold;
+    margin-bottom:25px;
+    margin-top:45px;
+}
+
+.chat-name-box{
+    transition:all 0.5s ease;
+}
+
+.chat-name-box-select{
+    transition:all 0.5s ease;
+    opacity:0;
+    pointer-events:none;
+    height:0px;
+    margin-top:-70px;
+
+}
+
+
+.chat-name-input{
+    width:60%;
+    border:1px solid #ececec;
+    background-color:white;
+    height:30px;
+    line-height:30px;
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    padding-left:15px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.chat-name-submit{
+    width:60%;
+    margin-right:auto;
+    margin-left:auto;
+    height:30px;
+    line-height:30px;
+    color:white;
+    text-align:center;
+    background-color:#3c948b;
+    margin-top:10px;
+    border-radius:2px;
+    cursor:pointer;
+
+    transition: all 0.2s ease;
+
+}
+
+.chat-name-submit:hover{
+    transition: all 0.2s ease;
+    background-color:#30766F;
+    color:#E6E6E6;
+}
+
+.messages{
+    opacity:0.5;
+    margin-top:25px;
+    width:100%;
+    box-sizing:border-box;
+    margin-right: auto;
+    margin-left: auto;
+    border-top: 5px solid #202020;
+    padding-top:15px;
+    padding-bottom:15px;
+    overflow-y:scroll;
+    max-height:500px;
+
+}
+
+.messages div{
+    border:1px solid #404040;
+    border-radius:5px;
+    padding:10px;
+    margin-bottom:10px;
+    line-height: 1.5em;
+    font-size:14px;
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+
+}
+
+.messages em{
+    font-weight:bold;
+    font-style: none;
+}
+
+.submit-messages-box{
+    max-height:18%;
+    box-sizing:border-box;
+    opacity:0;
+    pointer-events:none;
+    padding-top:10px;
+    border-top:2px solid #ececec;
+}
+
+.chat-message-input{
+    width:80%;
+    display:block;
+    margin-right: auto;
+    margin-left:auto;
+    height:100px;
+    line-height: 1.5em;
+    padding:15px;
+    font-size:14px;
+    box-sizing:border-box;
+    border-radius:5px;
+    border: 2px solid #ececec;
+
+}
+
+.message-submit{
+    width:80%;
+    cursor:pointer;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius:2px;
+    background-color:#3c948b;
+    margin-top:10px;
+    text-align:center;
+    height: 50px;
+    line-height:50px;
+    font-size:16px;
+    color:white;
+    margin-bottom:45px;
+
+}
+
+.message-submit:hover{
+    transition: all 0.2s ease;
+    background-color:#30766F;
+    color:#E6E6E6;
+}
