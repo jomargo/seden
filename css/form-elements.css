@@ -86,8 +86,8 @@ button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; bac
 .modal-progress-bar{
     max-width: 100%;
     margin-top:-9px;
-    /*position:relative;*/
-    /*z-index:2;*/
+    position:relative;
+    z-index:2;
 }
 .modal-header .close {
     font-size: 36px;
